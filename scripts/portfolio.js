@@ -40,11 +40,13 @@ class PortfolioManager {
             const shouldShow = filter === 'all' || itemCategory === filter;
             
             if (shouldShow) {
-                item.style.display = 'block';
+                item.style.display = '';
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
                 setTimeout(() => {
                     item.style.opacity = '1';
                     item.style.transform = 'translateY(0)';
-                }, 50);
+                }, 100);
             } else {
                 item.style.opacity = '0';
                 item.style.transform = 'translateY(20px)';
