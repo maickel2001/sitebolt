@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez mes réalisations en comptabilité et développement web - Portfolio de projets clients">
+    <meta name="keywords" content="portfolio, réalisations, projets, développement web, comptabilité, clients">
+    <title>Portfolio - Expert-Comptable & Développeur Web</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <p>Chargement...</p>
+        </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div id="progress-bar" class="progress-bar"></div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <h2><a href="index.html">MonSite<span>.pro</span></a></h2>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link">À propos</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+                    <li><a href="testimonials.html" class="nav-link">Témoignages</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-close" id="nav-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Changer le thème">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header-content">
+                    <h1 class="page-title fade-up">
+                        Mon <span class="text-gradient">Portfolio</span>
+                    </h1>
+                    <p class="page-description fade-up">
+                        Découvrez une sélection de mes réalisations en comptabilité et développement web
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Filter -->
+        <section class="portfolio-filter section">
+            <div class="container">
+                <div class="filter-buttons fade-up">
+                    <button class="filter-btn active" data-filter="all">Tous les projets</button>
+                    <button class="filter-btn" data-filter="web">Développement Web</button>
+                    <button class="filter-btn" data-filter="comptabilite">Comptabilité</button>
+                    <button class="filter-btn" data-filter="conseil">Conseil Digital</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Grid -->
+        <section class="portfolio-grid section">
+            <div class="container">
+                <div class="portfolio-items">
+                    <!-- Développement Web Projects -->
+                    <div class="portfolio-item fade-up" data-category="web">
+                        <div class="portfolio-card glass-effect hover-lift">
+                            <div class="portfolio-image">
+                                <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Site e-commerce TechStore" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-actions">
+                                        <button class="btn-icon" onclick="openPortfolioModal('techstore')">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2"/>
+                                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                                            </svg>
+                                        </button>
+                                        <a href="#" class="btn-icon" target="_blank" rel="noopener">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <div class="portfolio-category">Développement Web</div>
+                                <h3>Plateforme E-commerce TechStore</h3>
+                                <p>Développement complet d'une plateforme e-commerce moderne avec système de paiement intégré et back-office de gestion.</p>
+                                <div class="portfolio-tech">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">MongoDB</span>
+                                    <span class="tech-tag">Stripe</span>
+                                </div>
+                                <div class="portfolio-stats">
+                                    <div class="stat">
+                                        <span class="stat-value">3 mois</span>
+                                        <span class="stat-label">Durée</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-value">+150%</span>
+                                        <span class="stat-label">Ventes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item fade-up" data-category="web">
+                        <div class="portfolio-card glass-effect hover-lift">
+                            <div class="portfolio-image">
+                                <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Site vitrine Cabinet Médical" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-actions">
+                                        <button class="btn-icon" onclick="openPortfolioModal('medical')">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2"/>
+                                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                                            </svg>
+                                        </button>
+                                        <a href="#" class="btn-icon" target="_blank" rel="noopener">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <div class="portfolio-category">Développement Web</div>
+                                <h3>Site Vitrine Cabinet Médical</h3>
+                                <p>Création d'un site vitrine professionnel avec système de prise de rendez-vous en ligne et espace patient sécurisé.</p>
+                                <div class="portfolio-tech">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">PHP</span>
+                                </div>
+                                <div class="portfolio-stats">
+                                    <div class="stat">
+                                        <span class="stat-value">6 semaines</span>
+                                        <span class="stat-label">Durée</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-value">+80%</span>
+                                        <span class="stat-label">RDV en ligne</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item fade-up" data-category="web">
+                        <div class="portfolio-card glass-effect hover-lift">
+                            <div class="portfolio-image">
+                                <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Application de Gestion Restaurant" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-actions">
+                                        <button class="btn-icon" onclick="openPortfolioModal('restaurant')">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2"/>
+                                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                                            </svg>
+                                        </button>
+                                        <a href="#" class="btn-icon" target="_blank" rel="noopener">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <div class="portfolio-category">Développement Web</div>
+                                <h3>App de Gestion Restaurant</h3>
+                                <p>Application web complète pour la gestion d'un restaurant : commandes, stock, personnel et comptabilité intégrée.</p>
+                                <div class="portfolio-tech">
+                                    <span class="tech-tag">Vue.js</span>
+                                    <span class="tech-tag">Express</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                    <span class="tech-tag">Socket.io</span>
+                                </div>
+                                <div class="portfolio-stats">
+                                    <div class="stat">
+                                        <span class="stat-value">4 mois</span>
+                                        <span class="stat-label">Durée</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-value">-40%</span>
+                                        <span class="stat-label">Temps gestion</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comptabilité Projects -->
+                    <div class="portfolio-item fade-up" data-category="comptabilite">
+                        <div class="portfolio-card glass-effect hover-lift">
+                            <div class="portfolio-image">
+                                <img src="https://images.pexels.com/photos/6289028/pexels-photo-6289028.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Restructuration Comptable StartupTech" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-actions">
+                                        <button class="btn-icon" onclick="openPortfolioModal('startup')">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2"/>
+                                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <div class="portfolio-category">Comptabilité</div>
+                                <h3>Restructuration StartupTech</h3>
+                                <p>Mise en place complète de la comptabilité d'une startup tech : processus, outils digitaux et optimisation fiscale.</p>
+                                <div class="portfolio-tech">
+                                    <span class="tech-tag">Sage</span>
+                                    <span class="tech-tag">Excel</span>
+                                    <span class="tech-tag">API Bancaires</span>
+                                    <span class="tech-tag">Automatisation</span>
+                                </div>
+                                <div class="portfolio-stats">
+                                    <div class="stat">
+                                        <span class="stat-value">2 mois</span>
+                                        <span class="stat-label">Durée</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-value">-60%</span>
+                                        <span class="stat-label">Temps de saisie</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item fade-up" data-category="comptabilite">
+                        <div class="portfolio-card glass-effect hover-lift">
+                            <div class="portfolio-image">
+                                <img src="https://images.pexels.com/photos/6863515/pexels-photo-6863515.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Optimisation Fiscale PME" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-actions">
+                                        <button class="btn-icon" onclick="openPortfolioModal('pme')">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2"/>
+                                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <div class="portfolio-category">Comptabilité</div>
+                                <h3>Optimisation Fiscale PME</h3>
+                                <p>Audit complet et restructuration fiscale d'une PME de 50 salariés avec optimisation des charges et crédits d'impôt.</p>
+                                <div class="portfolio-tech">
+                                    <span class="tech-tag">Audit</span>
+                                    <span class="tech-tag">CIR/CII</span>
+                                    <span class="tech-tag">Social</span>
+                                    <span class="tech-tag">TVA</span>
+                                </div>
+                                <div class="portfolio-stats">
+                                    <div class="stat">
+                                        <span class="stat-value">3 mois</span>
+                                        <span class="stat-label">Durée</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-value">-25%</span>
+                                        <span class="stat-label">Impôts</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Conseil Digital Projects -->
+                    <div class="portfolio-item fade-up" data-category="conseil">
+                        <div class="portfolio-card glass-effect hover-lift">
+                            <div class="portfolio-image">
+                                <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Transformation Digitale Cabinet Avocats" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-actions">
+                                        <button class="btn-icon" onclick="openPortfolioModal('avocats')">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2"/>
+                                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <div class="portfolio-category">Conseil Digital</div>
+                                <h3>Transformation Cabinet Avocats</h3>
+                                <p>Accompagnement dans la digitalisation complète d'un cabinet d'avocats : dématérialisation, outils collaboratifs et CRM.</p>
+                                <div class="portfolio-tech">
+                                    <span class="tech-tag">CRM</span>
+                                    <span class="tech-tag">GED</span>
+                                    <span class="tech-tag">Workflow</span>
+                                    <span class="tech-tag">Formation</span>
+                                </div>
+                                <div class="portfolio-stats">
+                                    <div class="stat">
+                                        <span class="stat-value">6 mois</span>
+                                        <span class="stat-label">Durée</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-value">+50%</span>
+                                        <span class="stat-label">Productivité</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item fade-up" data-category="conseil">
+                        <div class="portfolio-card glass-effect hover-lift">
+                            <div class="portfolio-image">
+                                <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Audit Digital E-commerce" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-actions">
+                                        <button class="btn-icon" onclick="openPortfolioModal('ecommerce')">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2"/>
+                                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <div class="portfolio-category">Conseil Digital</div>
+                                <h3>Audit Digital E-commerce</h3>
+                                <p>Audit complet de la présence digitale d'une boutique en ligne : SEO, UX, performance et stratégie marketing.</p>
+                                <div class="portfolio-tech">
+                                    <span class="tech-tag">SEO</span>
+                                    <span class="tech-tag">Analytics</span>
+                                    <span class="tech-tag">UX/UI</span>
+                                    <span class="tech-tag">Performance</span>
+                                </div>
+                                <div class="portfolio-stats">
+                                    <div class="stat">
+                                        <span class="stat-value">1 mois</span>
+                                        <span class="stat-label">Durée</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-value">+200%</span>
+                                        <span class="stat-label">Trafic</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Modal -->
+        <div class="portfolio-modal" id="portfolio-modal">
+            <div class="modal-overlay" onclick="closePortfolioModal()"></div>
+            <div class="modal-content">
+                <button class="modal-close" onclick="closePortfolioModal()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+                <div class="modal-body" id="modal-body">
+                    <!-- Content will be dynamically loaded -->
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content glass-effect">
+                    <div class="cta-text">
+                        <h2>Un projet en tête ?</h2>
+                        <p>Discutons de votre projet et voyons comment je peux vous accompagner vers le succès.</p>
+                    </div>
+                    <div class="cta-actions">
+                        <a href="contact.html" class="btn btn-primary">
+                            Démarrer un projet
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                        <a href="services.html" class="btn btn-outline">
+                            Voir mes services
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><a href="index.html">MonSite<span>.pro</span></a></h3>
+                    <p>Expert-comptable et développeur web passionné par l'innovation et l'excellence.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="2"/>
+                                <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Comptabilité</a></li>
+                        <li><a href="services.html">Développement Web</a></li>
+                        <li><a href="services.html">Conseil Digital</a></li>
+                        <li><a href="chatbot.html">Chatbot</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li>📧 maickelmaickel833@gmail.com</li>
+                        <li>📱 +229 96 57 42 34</li>
+                        <li>📍 Bénin, Cotonou</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 MonSite.pro - Tous droits réservés</p>
+                <div class="footer-bottom-links">
+                    <a href="legal.html">Mentions légales</a>
+                    <a href="legal.html">RGPD</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Retour en haut">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M18 15l-6-6-6 6" stroke="currentColor" stroke-width="2"/>
+        </svg>
+    </button>
+
+    <!-- Chatbot -->
+    <div class="chatbot-widget">
+        <button class="chatbot-toggle" id="chatbot-toggle" aria-label="Ouvrir le chatbot">
+            <svg class="chat-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2"/>
+            </svg>
+        </button>
+        
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chatbot-header">
+                <h4>Assistant virtuel</h4>
+                <p>Je suis là pour vous aider !</p>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        Bonjour ! Comment puis-je vous aider aujourd'hui ?
+                    </div>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbot-input" placeholder="Tapez votre message...">
+                <button id="chatbot-send" aria-label="Envoyer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M22 2l-7 20-4-9-9-4z" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/animations.js"></script>
+    <script src="scripts/chatbot.js"></script>
+    <script src="scripts/portfolio.js"></script>
+</body>
+</html>

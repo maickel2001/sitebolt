@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page non trouvée - Erreur 404">
+    <title>Page non trouvée - MonSite.pro</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <h2><a href="index.html">MonSite<span>.pro</span></a></h2>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Changer le thème">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="error-section">
+            <div class="container">
+                <div class="error-content">
+                    <div class="error-animation">
+                        <div class="error-number">404</div>
+                        <div class="error-icon">
+                            <svg width="120" height="120" viewBox="0 0 24 24" fill="none">
+                                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" stroke="currentColor" stroke-width="2"/>
+                                <line x1="12" y1="9" x2="12" y2="13" stroke="currentColor" stroke-width="2"/>
+                                <path d="M12 17h.01" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <div class="error-text">
+                        <h1>Page non trouvée</h1>
+                        <p>Désolé, la page que vous recherchez n'existe pas ou a été déplacée.</p>
+                        
+                        <div class="error-actions">
+                            <a href="index.html" class="btn btn-primary">
+                                Retour à l'accueil
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <button onclick="history.back()" class="btn btn-outline">
+                                Page précédente
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </button>
+                        </div>
+                        
+                        <div class="error-suggestions">
+                            <h3>Pages populaires :</h3>
+                            <ul>
+                                <li><a href="services.html">Mes services</a></li>
+                                <li><a href="portfolio.html">Mon portfolio</a></li>
+                                <li><a href="about.html">À propos</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
+    
+    <style>
+        .error-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-2xl) 0;
+            background: linear-gradient(135deg, var(--background) 0%, var(--background-light) 100%);
+        }
+
+        .error-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-2xl);
+            align-items: center;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .error-animation {
+            position: relative;
+        }
+
+        .error-number {
+            font-size: 8rem;
+            font-weight: var(--font-weight-bold);
+            color: var(--primary-color);
+            opacity: 0.1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .error-icon {
+            color: var(--primary-color);
+            animation: bounce 2s infinite;
+        }
+
+        .error-text h1 {
+            font-size: var(--font-size-4xl);
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+
+        .error-text p {
+            font-size: var(--font-size-lg);
+            color: var(--text-secondary);
+            margin-bottom: var(--space-xl);
+        }
+
+        .error-actions {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            margin-bottom: var(--space-xl);
+            flex-wrap: wrap;
+        }
+
+        .error-suggestions {
+            text-align: left;
+            padding: var(--space-lg);
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            backdrop-filter: blur(var(--blur));
+        }
+
+        .error-suggestions h3 {
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+
+        .error-suggestions ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .error-suggestions li {
+            margin-bottom: var(--space-sm);
+        }
+
+        .error-suggestions a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color var(--transition-base);
+        }
+
+        .error-suggestions a:hover {
+            color: var(--primary-dark);
+        }
+
+        @media (max-width: 768px) {
+            .error-content {
+                grid-template-columns: 1fr;
+                gap: var(--space-xl);
+            }
+
+            .error-number {
+                font-size: 6rem;
+            }
+
+            .error-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .error-suggestions {
+                text-align: center;
+            }
+        }
+    </style>
+</body>
+</html>

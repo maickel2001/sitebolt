@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Témoignages clients - Découvrez les avis de mes clients satisfaits en comptabilité et développement web">
+    <meta name="keywords" content="témoignages, avis clients, satisfaction, comptabilité, développement web, références">
+    <title>Témoignages - Expert-Comptable & Développeur Web</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <p>Chargement...</p>
+        </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div id="progress-bar" class="progress-bar"></div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <h2><a href="index.html">MonSite<span>.pro</span></a></h2>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link">À propos</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="testimonials.html" class="nav-link active">Témoignages</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-close" id="nav-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Changer le thème">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header-content">
+                    <h1 class="page-title fade-up">
+                        <span class="text-gradient">Témoignages</span> Clients
+                    </h1>
+                    <p class="page-description fade-up">
+                        Découvrez ce que mes clients disent de mon travail et de mon accompagnement
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Stats -->
+        <section class="testimonials-stats section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card glass-effect fade-up">
+                        <div class="stat-icon">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="stat-number" data-target="98">0</div>
+                        <div class="stat-label">% de satisfaction</div>
+                    </div>
+                    
+                    <div class="stat-card glass-effect fade-up">
+                        <div class="stat-icon">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="8.5" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                <path d="M20 8v6M23 11l-3 3-3-3" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="stat-number" data-target="150">0</div>
+                        <div class="stat-label">Clients satisfaits</div>
+                    </div>
+                    
+                    <div class="stat-card glass-effect fade-up">
+                        <div class="stat-icon">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="stat-number" data-target="95">0</div>
+                        <div class="stat-label">% de recommandation</div>
+                    </div>
+                    
+                    <div class="stat-card glass-effect fade-up">
+                        <div class="stat-icon">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" stroke-width="2"/>
+                                <polyline points="9,22 9,12 15,12 15,22" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="stat-number" data-target="8">0</div>
+                        <div class="stat-label">Années d'expérience</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Testimonials -->
+        <section class="featured-testimonials section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Témoignages Vedettes</span>
+                    <h2 class="section-title">
+                        Ce que disent mes <span class="text-gradient">clients</span>
+                    </h2>
+                </div>
+                
+                <div class="testimonials-carousel" id="testimonials-carousel">
+                    <div class="testimonial-slide active">
+                        <div class="testimonial-card glass-effect">
+                            <div class="testimonial-content">
+                                <div class="quote-icon">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                        <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z" fill="currentColor"/>
+                                        <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <blockquote>
+                                    "Un accompagnement exceptionnel ! Grâce à son expertise double en comptabilité et développement, notre startup a pu structurer sa comptabilité tout en développant une plateforme web performante. Les économies fiscales réalisées nous ont permis d'investir davantage dans notre croissance."
+                                </blockquote>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
+                                            <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Thomas Durand</h4>
+                                        <p>CEO, StartupTech SARL</p>
+                                        <div class="rating">
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card glass-effect">
+                            <div class="testimonial-content">
+                                <div class="quote-icon">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                        <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z" fill="currentColor"/>
+                                        <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <blockquote>
+                                    "Notre site e-commerce a été transformé ! Les ventes ont augmenté de 150% grâce à la nouvelle plateforme développée. L'intégration avec notre système comptable nous fait gagner un temps précieux. Un professionnel à l'écoute et très compétent."
+                                </blockquote>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
+                                            <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Marie Dubois</h4>
+                                        <p>Directrice, TechStore SAS</p>
+                                        <div class="rating">
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card glass-effect">
+                            <div class="testimonial-content">
+                                <div class="quote-icon">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                        <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z" fill="currentColor"/>
+                                        <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <blockquote>
+                                    "La transformation digitale de notre cabinet a été remarquable. Nous sommes passés d'un cabinet traditionnel à un cabinet 4.0 en quelques mois. Nos clients apprécient cette modernité et notre productivité a augmenté de 50%."
+                                </blockquote>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
+                                            <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Maître Sophie Leroy</h4>
+                                        <p>Associée, Cabinet Juridique & Associés</p>
+                                        <div class="rating">
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                            <span class="star">★</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" id="prev-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </button>
+                    <div class="carousel-dots" id="carousel-dots">
+                        <button class="dot active" data-slide="0"></button>
+                        <button class="dot" data-slide="1"></button>
+                        <button class="dot" data-slide="2"></button>
+                    </div>
+                    <button class="carousel-btn next" id="next-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- All Testimonials Grid -->
+        <section class="all-testimonials section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Tous les Avis</span>
+                    <h2 class="section-title">
+                        Témoignages <span class="text-gradient">Clients</span>
+                    </h2>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-item fade-up">
+                        <div class="testimonial-mini glass-effect">
+                            <div class="testimonial-header">
+                                <div class="client-avatar">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
+                                        <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                <div class="client-info">
+                                    <h4>Dr. Martin</h4>
+                                    <p>Médecin généraliste</p>
+                                    <div class="rating">
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"Le site a révolutionné notre organisation. Les patients adorent pouvoir prendre RDV en ligne 24h/24. C'est un vrai plus pour notre cabinet."</p>
+                            <div class="testimonial-category">Développement Web</div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-item fade-up">
+                        <div class="testimonial-mini glass-effect">
+                            <div class="testimonial-header">
+                                <div class="client-avatar">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
+                                        <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                <div class="client-info">
+                                    <h4>Jean-Claude Moreau</h4>
+                                    <p>Directeur Général, Industrie Moderne SA</p>
+                                    <div class="rating">
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"Les économies réalisées nous permettent d'investir davantage dans notre développement. Un accompagnement de très haute qualité."</p>
+                            <div class="testimonial-category">Comptabilité</div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-item fade-up">
+                        <div class="testimonial-mini glass-effect">
+                            <div class="testimonial-header">
+                                <div class="client-avatar">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
+                                        <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                <div class="client-info">
+                                    <h4>Pierre Lenoir</h4>
+                                    <p>Gérant, Restaurant Le Gourmet</p>
+                                    <div class="rating">
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"Cette application a transformé notre restaurant. Nous gagnons un temps précieux et nous avons une vision claire de notre activité en temps réel."</p>
+                            <div class="testimonial-category">Développement Web</div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-item fade-up">
+                        <div class="testimonial-mini glass-effect">
+                            <div class="testimonial-header">
+                                <div class="client-avatar">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
+                                        <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                <div class="client-info">
+                                    <h4>Camille Rousseau</h4>
+                                    <p>E-commerce Manager, Boutique Mode Online</p>
+                                    <div class="rating">
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"L'audit a révélé des problèmes que nous n'avions pas identifiés. Les recommandations ont transformé notre business en quelques semaines."</p>
+                            <div class="testimonial-category">Conseil Digital</div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-item fade-up">
+                        <div class="testimonial-mini glass-effect">
+                            <div class="testimonial-header">
+                                <div class="client-avatar">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
+                                        <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                <div class="client-info">
+                                    <h4>Laurent Petit</h4>
+                                    <p>Directeur, Consulting Plus</p>
+                                    <div class="rating">
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"Un professionnel rigoureux et innovant. La digitalisation de nos processus comptables nous a fait gagner 40% de temps sur nos tâches administratives."</p>
+                            <div class="testimonial-category">Comptabilité</div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-item fade-up">
+                        <div class="testimonial-mini glass-effect">
+                            <div class="testimonial-header">
+                                <div class="client-avatar">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
+                                        <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                <div class="client-info">
+                                    <h4>Isabelle Moreau</h4>
+                                    <p>Fondatrice, Beauty & Co</p>
+                                    <div class="rating">
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                        <span class="star">★</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"Notre boutique en ligne cartonne grâce au nouveau site ! Design moderne, navigation fluide et intégration parfaite avec notre comptabilité."</p>
+                            <div class="testimonial-category">Développement Web</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Indicators -->
+        <section class="trust-indicators section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Confiance & Expertise</span>
+                    <h2 class="section-title">
+                        Pourquoi me faire <span class="text-gradient">confiance</span> ?
+                    </h2>
+                </div>
+                
+                <div class="trust-grid">
+                    <div class="trust-item fade-up">
+                        <div class="trust-card glass-effect">
+                            <div class="trust-icon">
+                                <svg width="50" height="50" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3>Expert-Comptable Diplômé</h3>
+                            <p>Diplôme d'expertise comptable reconnu par l'État, membre de l'Ordre des Experts-Comptables</p>
+                        </div>
+                    </div>
+
+                    <div class="trust-item fade-up">
+                        <div class="trust-card glass-effect">
+                            <div class="trust-icon">
+                                <svg width="50" height="50" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3>Certifications Techniques</h3>
+                            <p>Certifié en développement web moderne, sécurité informatique et gestion de projet digital</p>
+                        </div>
+                    </div>
+
+                    <div class="trust-item fade-up">
+                        <div class="trust-card glass-effect">
+                            <div class="trust-icon">
+                                <svg width="50" height="50" viewBox="0 0 24 24" fill="none">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3>Réseau Professionnel</h3>
+                            <p>Partenariats avec des cabinets d'avocats, notaires et consultants pour un service complet</p>
+                        </div>
+                    </div>
+
+                    <div class="trust-item fade-up">
+                        <div class="trust-card glass-effect">
+                            <div class="trust-icon">
+                                <svg width="50" height="50" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3>Garantie Qualité</h3>
+                            <p>Engagement de satisfaction client avec garantie de reprise gratuite en cas de non-conformité</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content glass-effect">
+                    <div class="cta-text">
+                        <h2>Rejoignez mes clients satisfaits</h2>
+                        <p>Bénéficiez de mon expertise double en comptabilité et développement web pour faire grandir votre entreprise.</p>
+                    </div>
+                    <div class="cta-actions">
+                        <a href="contact.html" class="btn btn-primary">
+                            Demander un devis gratuit
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                        <a href="portfolio.html" class="btn btn-outline">
+                            Voir mes réalisations
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><a href="index.html">MonSite<span>.pro</span></a></h3>
+                    <p>Expert-comptable et développeur web passionné par l'innovation et l'excellence.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="2"/>
+                                <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Comptabilité</a></li>
+                        <li><a href="services.html">Développement Web</a></li>
+                        <li><a href="services.html">Conseil Digital</a></li>
+                        <li><a href="chatbot.html">Chatbot</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li>📧 maickelmaickel833@gmail.com</li>
+                        <li>📱 229 96 57 42 34</li>
+                        <li>📍 Bénin, Cotonou</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 MonSite.pro - Tous droits réservés</p>
+                <div class="footer-bottom-links">
+                    <a href="legal.html">Mentions légales</a>
+                    <a href="legal.html">RGPD</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Retour en haut">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M18 15l-6-6-6 6" stroke="currentColor" stroke-width="2"/>
+        </svg>
+    </button>
+
+    <!-- Chatbot -->
+    <div class="chatbot-widget">
+        <button class="chatbot-toggle" id="chatbot-toggle" aria-label="Ouvrir le chatbot">
+            <svg class="chat-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2"/>
+            </svg>
+        </button>
+        
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chatbot-header">
+                <h4>Assistant virtuel</h4>
+                <p>Je suis là pour vous aider !</p>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        Bonjour ! Comment puis-je vous aider aujourd'hui ?
+                    </div>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbot-input" placeholder="Tapez votre message...">
+                <button id="chatbot-send" aria-label="Envoyer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M22 2l-7 20-4-9-9-4z" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/animations.js"></script>
+    <script src="scripts/chatbot.js"></script>
+    <script src="scripts/testimonials.js"></script>
+</body>
+</html>

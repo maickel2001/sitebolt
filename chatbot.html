@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Démonstration du chatbot intelligent - Assistant virtuel pour vos questions sur mes services">
+    <meta name="keywords" content="chatbot, assistant virtuel, intelligence artificielle, support client, automatisation">
+    <title>Chatbot - Expert-Comptable & Développeur Web</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <p>Chargement...</p>
+        </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div id="progress-bar" class="progress-bar"></div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <h2><a href="index.html">MonSite<span>.pro</span></a></h2>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link">À propos</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="testimonials.html" class="nav-link">Témoignages</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-close" id="nav-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Changer le thème">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header-content">
+                    <h1 class="page-title fade-up">
+                        <span class="text-gradient">Chatbot</span> Intelligent
+                    </h1>
+                    <p class="page-description fade-up">
+                        Découvrez mon assistant virtuel capable de répondre à vos questions 24h/7j
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chatbot Demo -->
+        <section class="chatbot-demo section">
+            <div class="container">
+                <div class="demo-content">
+                    <div class="demo-info fade-up">
+                        <div class="section-header">
+                            <span class="section-subtitle">Démonstration</span>
+                            <h2 class="section-title">
+                                Testez l'<span class="text-gradient">Assistant</span>
+                            </h2>
+                            <p class="section-description">
+                                Posez vos questions à mon chatbot intelligent. Il peut vous renseigner sur mes services, tarifs, disponibilités et bien plus encore.
+                            </p>
+                        </div>
+
+                        <div class="demo-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Réponses instantanées</h4>
+                                    <p>Obtenez des réponses immédiates à vos questions</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                        <polyline points="12,6 12,12 16,14" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Disponible 24h/7j</h4>
+                                    <p>L'assistant ne dort jamais et répond à toute heure</p>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2"/>
+                                        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Informations précises</h4>
+                                    <p>Base de connaissances complète et mise à jour</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="demo-suggestions">
+                            <h3>Questions suggérées :</h3>
+                            <div class="suggestion-buttons">
+                                <button class="suggestion-btn" onclick="sendSuggestion('Quels sont vos services ?')">
+                                    Quels sont vos services ?
+                                </button>
+                                <button class="suggestion-btn" onclick="sendSuggestion('Quels sont vos tarifs ?')">
+                                    Quels sont vos tarifs ?
+                                </button>
+                                <button class="suggestion-btn" onclick="sendSuggestion('Comment vous contacter ?')">
+                                    Comment vous contacter ?
+                                </button>
+                                <button class="suggestion-btn" onclick="sendSuggestion('Quels sont vos horaires ?')">
+                                    Quels sont vos horaires ?
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="demo-chatbot fade-up">
+                        <div class="chatbot-container glass-effect">
+                            <div class="chatbot-header-demo">
+                                <div class="chatbot-avatar">
+                                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                <div class="chatbot-info">
+                                    <h4>Assistant MonSite.pro</h4>
+                                    <p class="status online">En ligne</p>
+                                </div>
+                                <button class="chatbot-minimize" onclick="toggleChatbot()">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M18 15l-6-6-6 6" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            
+                            <div class="chatbot-messages-demo" id="demo-messages">
+                                <div class="message bot-message">
+                                    <div class="message-avatar">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                    </div>
+                                    <div class="message-content">
+                                        Bonjour ! Je suis l'assistant virtuel de MonSite.pro. Comment puis-je vous aider aujourd'hui ? 😊
+                                    </div>
+                                    <div class="message-time">Maintenant</div>
+                                </div>
+                            </div>
+                            
+                            <div class="chatbot-input-demo">
+                                <input type="text" id="demo-input" placeholder="Tapez votre message..." onkeypress="handleDemoKeyPress(event)">
+                                <button id="demo-send" onclick="sendDemoMessage()">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M22 2l-7 20-4-9-9-4z" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chatbot Features -->
+        <section class="chatbot-features section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Fonctionnalités</span>
+                    <h2 class="section-title">
+                        Pourquoi utiliser un <span class="text-gradient">Chatbot</span> ?
+                    </h2>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card glass-effect fade-up hover-lift">
+                        <div class="feature-icon-large">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                <polyline points="12,6 12,12 16,14" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Disponibilité 24/7</h3>
+                        <p>Vos clients peuvent obtenir des informations à tout moment, même en dehors des heures d'ouverture.</p>
+                        <ul class="feature-benefits">
+                            <li>Réponses instantanées</li>
+                            <li>Pas d'attente</li>
+                            <li>Service continu</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card glass-effect fade-up hover-lift">
+                        <div class="feature-icon-large">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="10" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Support Client Amélioré</h3>
+                        <p>Réduction de la charge de travail en traitant automatiquement les questions fréquentes.</p>
+                        <ul class="feature-benefits">
+                            <li>Moins d'appels répétitifs</li>
+                            <li>Plus de temps pour les cas complexes</li>
+                            <li>Satisfaction client accrue</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card glass-effect fade-up hover-lift">
+                        <div class="feature-icon-large">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Génération de Leads</h3>
+                        <p>Qualification automatique des prospects et collecte d'informations de contact.</p>
+                        <ul class="feature-benefits">
+                            <li>Qualification des besoins</li>
+                            <li>Collecte de coordonnées</li>
+                            <li>Orientation vers les services</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card glass-effect fade-up hover-lift">
+                        <div class="feature-icon-large">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Technologie Avancée</h3>
+                        <p>Développé en JavaScript pur, sans dépendances externes, rapide et sécurisé.</p>
+                        <ul class="feature-benefits">
+                            <li>Code optimisé</li>
+                            <li>Chargement rapide</li>
+                            <li>Sécurité renforcée</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementation Process -->
+        <section class="implementation-process section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Processus</span>
+                    <h2 class="section-title">
+                        Comment j'intègre un <span class="text-gradient">Chatbot</span>
+                    </h2>
+                </div>
+                
+                <div class="process-timeline">
+                    <div class="process-step fade-up">
+                        <div class="step-number">01</div>
+                        <div class="step-content glass-effect">
+                            <h3>Analyse des besoins</h3>
+                            <p>Étude de vos questions fréquentes, identification des cas d'usage et définition des objectifs du chatbot.</p>
+                            <div class="step-details">
+                                <span class="detail-item">📋 Audit des demandes clients</span>
+                                <span class="detail-item">🎯 Définition des objectifs</span>
+                                <span class="detail-item">📊 Analyse du trafic</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step fade-up">
+                        <div class="step-number">02</div>
+                        <div class="step-content glass-effect">
+                            <h3>Conception & Design</h3>
+                            <p>Création de l'arbre de conversation, design de l'interface et intégration avec votre charte graphique.</p>
+                            <div class="step-details">
+                                <span class="detail-item">🎨 Design personnalisé</span>
+                                <span class="detail-item">💬 Scénarios de conversation</span>
+                                <span class="detail-item">🔄 Flux utilisateur</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step fade-up">
+                        <div class="step-number">03</div>
+                        <div class="step-content glass-effect">
+                            <h3>Développement</h3>
+                            <p>Programmation en JavaScript pur, intégration des APIs nécessaires et tests de fonctionnement.</p>
+                            <div class="step-details">
+                                <span class="detail-item">⚡ Code optimisé</span>
+                                <span class="detail-item">🔌 Intégrations API</span>
+                                <span class="detail-item">🧪 Tests complets</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step fade-up">
+                        <div class="step-number">04</div>
+                        <div class="step-content glass-effect">
+                            <h3>Déploiement & Suivi</h3>
+                            <p>Mise en ligne, formation de vos équipes et suivi des performances avec optimisations continues.</p>
+                            <div class="step-details">
+                                <span class="detail-item">🚀 Mise en production</span>
+                                <span class="detail-item">📚 Formation équipe</span>
+                                <span class="detail-item">📈 Suivi & optimisation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content glass-effect">
+                    <div class="cta-text">
+                        <h2>Intéressé par un chatbot pour votre site ?</h2>
+                        <p>Contactez-moi pour discuter de vos besoins et obtenir un devis personnalisé pour l'intégration d'un assistant virtuel.</p>
+                    </div>
+                    <div class="cta-actions">
+                        <a href="contact.html" class="btn btn-primary">
+                            Demander un devis
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                        <button class="btn btn-outline" onclick="window.chatbot.openChat()">
+                            Tester le chatbot
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><a href="index.html">MonSite<span>.pro</span></a></h3>
+                    <p>Expert-comptable et développeur web passionné par l'innovation et l'excellence.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="2"/>
+                                <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Comptabilité</a></li>
+                        <li><a href="services.html">Développement Web</a></li>
+                        <li><a href="services.html">Conseil Digital</a></li>
+                        <li><a href="chatbot.html">Chatbot</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li>📧 contact@monsite.pro</li>
+                        <li>📱 +33 1 23 45 67 89</li>
+                        <li>📍 Paris, France</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 MonSite.pro - Tous droits réservés</p>
+                <div class="footer-bottom-links">
+                    <a href="legal.html">Mentions légales</a>
+                    <a href="legal.html">RGPD</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Retour en haut">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M18 15l-6-6-6 6" stroke="currentColor" stroke-width="2"/>
+        </svg>
+    </button>
+
+    <!-- Chatbot -->
+    <div class="chatbot-widget">
+        <button class="chatbot-toggle" id="chatbot-toggle" aria-label="Ouvrir le chatbot">
+            <svg class="chat-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2"/>
+            </svg>
+        </button>
+        
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chatbot-header">
+                <h4>Assistant virtuel</h4>
+                <p>Je suis là pour vous aider !</p>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        Bonjour ! Comment puis-je vous aider aujourd'hui ?
+                    </div>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbot-input" placeholder="Tapez votre message...">
+                <button id="chatbot-send" aria-label="Envoyer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M22 2l-7 20-4-9-9-4z" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/animations.js"></script>
+    <script src="scripts/chatbot.js"></script>
+    <script src="scripts/chatbot-demo.js"></script>
+</body>
+</html>
