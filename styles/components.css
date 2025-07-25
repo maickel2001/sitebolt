@@ -617,6 +617,7 @@
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-xl);
     backdrop-filter: blur(var(--blur));
+    -webkit-backdrop-filter: blur(var(--blur));
     display: none;
     flex-direction: column;
     box-shadow: var(--shadow-large);
@@ -754,10 +755,20 @@
 @media (max-width: 768px) {
     .services-grid {
         grid-template-columns: 1fr;
+        gap: var(--space-lg);
     }
     
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+
+    .stat-card {
+        padding: var(--space-lg);
+    }
+
+    .stat-number {
+        font-size: var(--font-size-3xl);
     }
     
     .skills-grid {
@@ -766,6 +777,16 @@
     
     .values-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-lg);
+    }
+
+    .value-card {
+        padding: var(--space-lg);
+    }
+
+    .value-icon {
+        width: 60px;
+        height: 60px;
     }
     
     .timeline::before {
@@ -782,9 +803,24 @@
         height: 20px;
     }
     
+    .timeline-content {
+        padding: var(--space-lg);
+    }
+
     .process-step {
         flex-direction: column;
         text-align: center;
+        gap: var(--space-md);
+    }
+
+    .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: var(--font-size-lg);
+    }
+
+    .step-content {
+        padding: var(--space-md);
     }
     
     .chatbot-window {
@@ -796,33 +832,143 @@
         bottom: var(--space-md);
         right: var(--space-md);
     }
+
+    .service-card {
+        padding: var(--space-lg);
+    }
+
+    .service-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .cta-content {
+        padding: var(--space-xl);
+        gap: var(--space-lg);
+    }
+
+    .cta-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cta-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 480px) {
     .stats-grid {
         grid-template-columns: 1fr;
+        gap: var(--space-sm);
+    }
+
+    .stat-card {
+        padding: var(--space-md);
+    }
+
+    .stat-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .stat-number {
+        font-size: var(--font-size-2xl);
     }
     
     .values-grid {
         grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .value-card {
+        padding: var(--space-md);
+    }
+
+    .value-icon {
+        width: 50px;
+        height: 50px;
     }
     
     .about-highlights {
         grid-template-columns: 1fr;
+        gap: var(--space-sm);
+    }
+
+    .highlight-item {
+        padding: var(--space-md);
+        gap: var(--space-sm);
+    }
+
+    .highlight-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .service-card {
+        padding: var(--space-md);
+    }
+
+    .service-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .service-category-header {
+        padding: var(--space-lg);
+        gap: var(--space-md);
+    }
+
+    .service-category-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: var(--font-size-base);
+    }
+
+    .step-content {
+        padding: var(--space-sm);
+    }
+
+    .timeline-content {
+        padding: var(--space-md);
+    }
+
+    .cta-content {
+        padding: var(--space-lg);
+        gap: var(--space-md);
     }
     
-    .cta-actions {
-        flex-direction: column;
-        width: 100%;
+    .cta-text h2 {
+        font-size: var(--font-size-2xl);
+        margin-bottom: var(--space-xs);
     }
     
-    .cta-actions .btn {
-        width: 100%;
-        justify-content: center;
+    .cta-text p {
+        font-size: var(--font-size-sm);
     }
     
     .chatbot-window {
         width: calc(100vw - 2rem);
         right: calc(-100vw + 60px + 2rem);
+        height: 350px;
+    }
+
+    .chatbot-toggle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .faq-question h3 {
+        font-size: var(--font-size-base);
+    }
+
+    .faq-answer p {
+        font-size: var(--font-size-sm);
     }
 }
