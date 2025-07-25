@@ -180,7 +180,7 @@ a:hover {
     left: 0;
     width: 100%;
     height: var(--header-height);
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
@@ -189,7 +189,7 @@ a:hover {
 }
 
 [data-theme="dark"] .header {
-    background: rgba(17, 24, 39, 0.95);
+    background: rgba(17, 24, 39, 0.98);
 }
 
 .nav {
@@ -792,13 +792,17 @@ a:hover {
         width: 80%;
         max-width: 400px;
         height: 100vh;
-        background: var(--glass-bg);
+        background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(var(--blur));
         -webkit-backdrop-filter: blur(var(--blur));
-        border-left: 1px solid var(--glass-border);
+        border-left: 1px solid var(--border-color);
         padding: var(--space-2xl) var(--space-lg);
         transition: right var(--transition-base);
         z-index: 1001;
+    }
+    
+    [data-theme="dark"] .nav-menu {
+        background: rgba(17, 24, 39, 0.98);
     }
     
     .nav-menu.active {
