@@ -658,6 +658,129 @@ const portfolioStyles = `
             transition: all 0.3s ease;
         }
         
+        /* Mobile Modal Fixes */
+        @media (max-width: 768px) {
+            .modal-content {
+                width: 95%;
+                max-width: none;
+                max-height: 95vh;
+                margin: 2.5vh auto;
+                border-radius: var(--radius-lg);
+            }
+            
+            .modal-header {
+                grid-template-columns: 1fr;
+                gap: var(--space-md);
+                padding: var(--space-lg);
+            }
+            
+            .modal-image img {
+                height: 200px;
+            }
+            
+            .modal-section {
+                padding: 0 var(--space-lg) var(--space-lg);
+            }
+            
+            .modal-section h3 {
+                font-size: var(--font-size-lg);
+                margin-bottom: var(--space-sm);
+            }
+            
+            .challenge-list li,
+            .solution-list li {
+                padding: var(--space-xs) 0;
+                padding-left: var(--space-md);
+                font-size: var(--font-size-sm);
+            }
+            
+            .tech-tags {
+                gap: var(--space-xs);
+            }
+            
+            .tech-tag {
+                font-size: var(--font-size-xs);
+                padding: 2px var(--space-xs);
+            }
+            
+            .results-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-sm);
+            }
+            
+            .result-item {
+                padding: var(--space-sm);
+            }
+            
+            .result-icon {
+                width: 24px;
+                height: 24px;
+                font-size: var(--font-size-xs);
+            }
+            
+            .result-text {
+                font-size: var(--font-size-sm);
+            }
+            
+            .testimonial-card {
+                padding: var(--space-lg);
+            }
+            
+            .testimonial-card blockquote {
+                font-size: var(--font-size-base);
+            }
+            
+            .modal-actions {
+                padding: var(--space-lg);
+                flex-direction: column;
+                gap: var(--space-sm);
+            }
+            
+            .modal-close {
+                top: var(--space-sm);
+                right: var(--space-sm);
+                width: 35px;
+                height: 35px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .modal-content {
+                width: 98%;
+                max-height: 98vh;
+                margin: 1vh auto;
+                border-radius: var(--radius-base);
+            }
+            
+            .modal-header {
+                padding: var(--space-md);
+            }
+            
+            .modal-image img {
+                height: 150px;
+            }
+            
+            .modal-section {
+                padding: 0 var(--space-md) var(--space-md);
+            }
+            
+            .modal-section h3 {
+                font-size: var(--font-size-base);
+            }
+            
+            .modal-info h2 {
+                font-size: var(--font-size-xl);
+            }
+            
+            .testimonial-card {
+                padding: var(--space-md);
+            }
+            
+            .modal-actions {
+                padding: var(--space-md);
+            }
+        }
+        
         .modal-close {
             position: absolute;
             top: var(--space-lg);
